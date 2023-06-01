@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\App_sale_manager",
+    "\\App_sale_manager\\bin",
+    "\\App_sale_manager\\Form_main_admin",
+    "\\App_sale_manager\\Form_main_NV",
+    "\\App_sale_manager\\Giao dịch",
+    "\\App_sale_manager\\Hàng hóa",
+    "\\App_sale_manager\\Đối tác",
+    "\\MYSQL_SEVER_DATATABLE"
+  ],
+  "SelectedNode": "\\App_sale_manager\\Form_UpdateNV_NV.cs",
+  "PreviewInSolutionExplorer": false
+}
