@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2581118A-472A-430E-A44B-4A191D459DF3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>App_sale_manager</RootNamespace>
+    <AssemblyName>App_sale_manager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HanghoaGD.cs" />
+    <Compile Include="Nhân viên\Form_addnv_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nhân viên\Form_addnv_admin.Designer.cs">
+      <DependentUpon>Form_addnv_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_main_admin\Tab_DoiTac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_admin\Tab_BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_admin\Tab_GiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_admin\Tab_HangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_admin\Tab_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_admin\Form_main_admin_UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_admin\Tab_TongQuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_NV\Form_main_NV_UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_NV\Tab_CaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_NV\Tab_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_NV\Tab_LichLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_NV\Tab_TongQuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SL.Designer.cs">
+      <DependentUpon>SL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tổng quan\Form_chuthich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tổng quan\Form_chuthich.Designer.cs">
+      <DependentUpon>Form_chuthich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_doipass_nv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_doipass_nv.Designer.cs">
+      <DependentUpon>Form_doipass_nv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_selectphoto_nv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_selectphoto_nv.Designer.cs">
+      <DependentUpon>Form_selectphoto_nv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UpdateNV_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UpdateNV_admin.Designer.cs">
+      <DependentUpon>Form_UpdateNV_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UpdateNV_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UpdateNV_NV.Designer.cs">
+      <DependentUpon>Form_UpdateNV_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumericUpDown_fc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NumericUpDown_fc.Designer.cs">
+      <DependentUpon>NumericUpDown_fc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form_NV_chamcong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NV_chamcong.Designer.cs">
+      <DependentUpon>Form_NV_chamcong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nhân viên\Form_nv_phancong_chamcong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nhân viên\Form_nv_phancong_chamcong.Designer.cs">
+      <DependentUpon>Form_nv_phancong_chamcong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_ChiTietNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_ChiTietNH.Designer.cs">
+      <DependentUpon>Form_ChiTietNH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_ChiTietHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_ChiTietHH.Designer.cs">
+      <DependentUpon>Form_ChiTietHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_HoaDonNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_HoaDonNH.Designer.cs">
+      <DependentUpon>Form_HoaDonNH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_NhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_NhapHang.Designer.cs">
+      <DependentUpon>Form_NhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_QLLoaiHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_QLLoaiHH.Designer.cs">
+      <DependentUpon>Form_QLLoaiHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_ThemSuaHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hàng hóa\Form_ThemSuaHangHoa.Designer.cs">
+      <DependentUpon>Form_ThemSuaHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Đối tác\DTCC_guest_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đối tác\DTCC_guest_form.Designer.cs">
+      <DependentUpon>DTCC_guest_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Đối tác\DTCC_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đối tác\DTCC_form.Designer.cs">
+      <DependentUpon>DTCC_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Đối tác\DTCC_guest_modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đối tác\DTCC_guest_modifier.Designer.cs">
+      <DependentUpon>DTCC_guest_modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Đối tác\DTCC_modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đối tác\DTCC_modifier.Designer.cs">
+      <DependentUpon>DTCC_modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao dịch\Form_CTHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao dịch\Form_CTHD.Designer.cs">
+      <DependentUpon>Form_CTHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_doipass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_doipass.Designer.cs">
+      <DependentUpon>Form_doipass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao dịch\Form_GiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao dịch\Form_GiaoDich.Designer.cs">
+      <DependentUpon>Form_GiaoDich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nhân viên\Form_lichhangtuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nhân viên\Form_lichhangtuan.Designer.cs">
+      <DependentUpon>Form_lichhangtuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_login.Designer.cs">
+      <DependentUpon>Form_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_main_admin\Form_main_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_admin\Form_main_admin.Designer.cs">
+      <DependentUpon>Form_main_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_main_NV\Form_main_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main_NV\Form_main_NV.Designer.cs">
+      <DependentUpon>Form_main_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nhân viên\Form_nv_phancong_themlich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nhân viên\Form_nv_phancong_themlich.Designer.cs">
+      <DependentUpon>Form_nv_phancong_themlich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Đối tác\Sale.cs" />
+    <Compile Include="Đối tác\Sale_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đối tác\Sale_manager.Designer.cs">
+      <DependentUpon>Sale_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Đối tác\Sale_viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đối tác\Sale_viewer.Designer.cs">
+      <DependentUpon>Sale_viewer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Nhân viên\Form_addnv_admin.resx">
+      <DependentUpon>Form_addnv_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UpdateNV_NV.resx">
+      <DependentUpon>Form_UpdateNV_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OvalPictureBox.resx">
+      <DependentUpon>OvalPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SL.resx">
+      <DependentUpon>SL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tổng quan\Form_chuthich.resx">
+      <DependentUpon>Form_chuthich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_doipass_nv.resx">
+      <DependentUpon>Form_doipass_nv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_selectphoto_nv.resx">
+      <DependentUpon>Form_selectphoto_nv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NV_chamcong.resx">
+      <DependentUpon>Form_NV_chamcong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UpdateNV_admin.resx">
+      <DependentUpon>Form_UpdateNV_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhân viên\Form_nv_phancong_chamcong.resx">
+      <DependentUpon>Form_nv_phancong_chamcong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hàng hóa\Form_ChiTietHH.resx">
+      <DependentUpon>Form_ChiTietHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hàng hóa\Form_ChiTietNH.resx">
+      <DependentUpon>Form_ChiTietNH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hàng hóa\Form_HoaDonNH.resx">
+      <DependentUpon>Form_HoaDonNH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hàng hóa\Form_NhapHang.resx">
+      <DependentUpon>Form_NhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hàng hóa\Form_QLLoaiHH.resx">
+      <DependentUpon>Form_QLLoaiHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hàng hóa\Form_ThemSuaHangHoa.resx">
+      <DependentUpon>Form_ThemSuaHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Đối tác\DTCC_guest_form.resx">
+      <DependentUpon>DTCC_guest_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Đối tác\DTCC_form.resx">
+      <DependentUpon>DTCC_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Đối tác\DTCC_guest_modifier.resx">
+      <DependentUpon>DTCC_guest_modifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Đối tác\DTCC_modifier.resx">
+      <DependentUpon>DTCC_modifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao dịch\Form_CTHD.resx">
+      <DependentUpon>Form_CTHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_doipass.resx">
+      <DependentUpon>Form_doipass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao dịch\Form_GiaoDich.resx">
+      <DependentUpon>Form_GiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhân viên\Form_lichhangtuan.resx">
+      <DependentUpon>Form_lichhangtuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_login.resx">
+      <DependentUpon>Form_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_main_admin\Form_main_admin.resx">
+      <DependentUpon>Form_main_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_main_NV\Form_main_NV.resx">
+      <DependentUpon>Form_main_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhân viên\Form_nv_phancong_themlich.resx">
+      <DependentUpon>Form_nv_phancong_themlich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Đối tác\Sale_manager.resx">
+      <DependentUpon>Sale_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Đối tác\Sale_viewer.resx">
+      <DependentUpon>Sale_viewer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\door-login-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\2546560-middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\images %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Vương miện vàng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\vương miện bạc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\vương miện đồng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Dấu tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\dấu X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\mắt đóng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image samples for testing\Đối tác giao dịch\refresh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\matdong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\refresh.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image samples for testing\DTGD\refresh.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
